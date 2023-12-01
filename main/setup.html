@@ -16,6 +16,8 @@
         <link rel="prev" href="install.html">
       
       
+        <link rel="next" href="test.html">
+      
       
       <link rel="icon" href="_images/percona-favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
@@ -43,8 +45,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Poppins";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -438,7 +440,72 @@
   
   
     <li class="md-nav__item">
-      <a href="replication.md" class="md-nav__link">
+      <a href="test.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test TDE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    How to
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            How to
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="replication.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -570,6 +637,13 @@
 <p>Create the extension using the <a href="https://www.postgresql.org/docs/current/sql-createextension.html">CREATE EXTENSION</a> command. You must have the privileges of a superuser or a database owner to use this command. Connect to <code>psql</code> as a superuser for a database and run the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="n">EXTENSION</span><span class="w"> </span><span class="n">pg_tde</span><span class="p">;</span>
 </code></pre></div>
+<p>By default, the <code>pg_tde</code> extension is created for the <code>postgres</code> database or the database which your user owns. To encrypt the data in other databases, you must explicitly run the <code>CREATE EXTENSION</code> command for them. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can have the <code>pg_tde</code> extension automatically enabled for every newly created database. Modify the template <code>template1</code> database as follows: </p>
+<div class="highlight"><pre><span></span><code>psql -d template1 -c &#39;CREATE EXTENSION pg_tde;&#39;
+</code></pre></div>
+</div>
 </li>
 <li>
 <p>Set the location of the keyring configuration file in postgresql.conf: <code>pg_tde.keyringConfigFile = '/where/to/put/the/keyring.json'</code></p>

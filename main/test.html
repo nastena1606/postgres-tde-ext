@@ -6,17 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Install pg_tde using one of available installation methods:">
+        <meta name="description" content="To check if the data is encrypted, do the following:">
       
       
         <meta name="author" content="Percona LLC">
       
       
       
-        <link rel="prev" href="tde.html">
+        <link rel="prev" href="setup.html">
       
       
-        <link rel="next" href="setup.html">
+        <link rel="next" href="replication.html">
       
       
       <link rel="icon" href="_images/percona-favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Install - pg_tde documentation</title>
+        <title>Test TDE - pg_tde documentation</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#test-transparent-data-encryption" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Install
+              Test TDE
             
           </span>
         </div>
@@ -346,30 +346,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Install
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="install.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="install.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -378,35 +358,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -437,10 +388,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="test.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="test.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -449,6 +409,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -566,23 +527,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -596,7 +540,7 @@
                   
 
   
-    <a href="https://github.com/Percona-Lab/postgres-tde-ext/edit/main/documentation/docs/install.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/Percona-Lab/postgres-tde-ext/edit/main/documentation/docs/test.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -605,74 +549,25 @@
     
       
     
-    <a href="https://github.com/Percona-Lab/postgres-tde-ext/raw/main/documentation/docs/install.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/Percona-Lab/postgres-tde-ext/raw/main/documentation/docs/test.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<p>Install <code>pg_tde</code> using one of available installation methods:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Build from source</label><label for="__tabbed_1_2">Package manager</label><label for="__tabbed_1_3">Run in Docker</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
+<h1 id="test-transparent-data-encryption">Test Transparent Data Encryption<a class="headerlink" href="#test-transparent-data-encryption" title="Permanent link">&para;</a></h1>
+<p>To check if the data is encrypted, do the following:</p>
 <ol>
+<li>Create a table in the database for which you have <a href="setup.html">enabled <code>pg_tde</code></a></li>
+<li>Insert some test data </li>
 <li>
-<p>To build <code>pg_tde</code> from source code, you require the following on Ubuntu/Debian:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>make<span class="w"> </span>gcc<span class="w"> </span>libjson-c-dev<span class="w"> </span>postgresql-server-dev-16
+<p>Run the following function:</p>
+<div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="n">pgtde_is_encrypted</span><span class="p">(</span><span class="s1">&#39;table_name&#39;</span><span class="p">);</span>
 </code></pre></div>
-</li>
-<li>
-<p><a href="https://docs.percona.com/postgresql/16/installing.html">Install Percona Distribution for PostgreSQL 16</a> or <a href="https://www.postgresql.org/download/">upstream PostgreSQL 16</a></p>
-</li>
-<li>
-<p>If PostgreSQL is installed in a non standard directory, set the <code>PG_CONFIG</code> environment variable to point to the <code>pg_config</code> executable.</p>
-</li>
-<li>
-<p>Clone the repository:  </p>
-<div class="highlight"><pre><span></span><code>git clone git://github.com/Percona-Lab/postgres-tde-ext
-</code></pre></div>
-</li>
-<li>
-<p>Compile and install the extension</p>
-<div class="highlight"><pre><span></span><code>cd postgres-tde-ext
-make USE_PGXS=1
-sudo make USE_PGXS=1 install
-</code></pre></div>
+<p>The function returns <code>t</code> if the table is encrypted and <code>f</code> - if not.</p>
 </li>
 </ol>
-</div>
-<div class="tabbed-block">
-<p>Currently only DEB packages are available. If you are running RPM-based operating system, consider <a href="#build-from-source">building the extension from source</a> or <a href="#run-in-docker">running it in Docker</a></p>
-<ol>
-<li>
-<p>Download the latest <a href="https://github.com/Percona-Lab/postgres-tde-ext/releases">release package</a></p>
-<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://github.com/Percona-Lab/postgres-tde-ext/releases/download/latest/pgtde-pgdg16.deb
-</code></pre></div>
-</li>
-<li>
-<p>Install the package</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>pgtde-pgdg16.deb
-</code></pre></div>
-</li>
-</ol>
-</div>
-<div class="tabbed-block">
-<p>You can find Docker images built from the current main branch on <a href="https://hub.docker.com/r/perconalab/postgres-tde-ext">Docker Hub</a>. Images are built on top of <a href="https://hub.docker.com/_/postgres">postgres:16</a> official image.     </p>
-<p>To run <code>pg_tde</code> in Docker, use the following command:    </p>
-<div class="highlight"><pre><span></span><code>docker run --name pg-tde -e POSTGRES_PASSWORD=mysecretpassword -d perconalab/postgres-tde-ext
-</code></pre></div>
-<p>It builds and adds <code>pg_tde</code> extension to PostgreSQL 16. Relevant <code>postgresql.conf</code> and <code>tde_conf.json</code> are created in <code>/etc/postgresql/</code> inside the container. This directory is exposed as a volume.    </p>
-<p>See <a href="https://hub.docker.com/_/postgres">Docker Docs</a> on usage.    </p>
-<p>You can also build a Docker image manually with:    </p>
-<div class="highlight"><pre><span></span><code>docker build . -f ./docker/Dockerfile -t your-image-name
-</code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
-<p><a class="md-button" href="setup.html">Setup</a></p>
 
   <hr>
 <div class="md-source-file">
